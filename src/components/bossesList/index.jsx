@@ -51,7 +51,7 @@ export default function BossesList() {
                 {bosses.map((boss) => (
                     <div key={boss.id} className={styles.bossCard}>
                         <div className={styles.bossImageContainer}>
-                            <img src={boss.image} alt={boss.name} className={styles.bossImage} />
+                            <img src={boss.image || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTheoVbPv4QDXIPlVMOQvl324IBnjNDwk6fCQ&s"} alt={boss.name || "sem imagem"} className={styles.bossImage} />
                         </div>
 
                         <div className={styles.bossInfo}>
