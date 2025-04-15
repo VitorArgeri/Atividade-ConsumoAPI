@@ -1,6 +1,6 @@
 # Elden Ring Bosses App
 
-Esta atividade tem como objetivo a criação de uma aplicação que utilize das funcionalidades de uma API. A API escolhida fora sobre o jogo Elden Ring, uma API com os seus respectivos bosses, com suas descrições, regiões, localizações, drops e pontos de vida. A API fora aplicada no componente bossesList, que depois foi importado dentro de page.jsx.
+Esta atividade teve como objetivo a criação de uma aplicação que utilize das funcionalidades de uma API. A API escolhida fora sobre o jogo Elden Ring, uma API com os seus respectivos bosses, com suas descrições, regiões, localizações, drops e pontos de vida. A API fora aplicada no componente bossesList, que depois foi importado dentro de page.jsx.
 
 ## Estruturação
 
