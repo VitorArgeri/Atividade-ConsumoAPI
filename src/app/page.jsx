@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <FilmList />
+        <BossesList />
       </main>
 
       <footer className={styles.footer}>
