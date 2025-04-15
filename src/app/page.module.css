@@ -2,7 +2,8 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #f8f9fa;
+  background-color: black;
+  color: white;
 }
 
 .main {
@@ -14,6 +15,11 @@
   text-align: center;
   padding: 20px;
   border-top: 1px solid #eaeaea;
-  background-color: #fff;
-  color: #333;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+}
+
+.span {
+  color: #0070f3;
 }

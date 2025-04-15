@@ -1,0 +1,85 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    margin-left: 10%;
+}
+
+.bossesTitle {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.bossesGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+
+.bossCard {
+    background-color: white;
+    width: 450px;
+    border-radius: 15px;
+    color: black;
+    border: 3px solid rgb(148, 40, 40);
+    transition: 0.3s ease;
+}
+
+.bossCard:hover {
+    transform: scale(1.05);
+    background-color: rgb(210, 210, 210);
+}
+
+.bossImageContainer {
+    height: 250px;
+    overflow: hidden;
+}
+
+.bossImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.bossInfo {
+    padding: 20px;
+}
+
+.bossName {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.bossDescription {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.bossRegion {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.bossLocation {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.bossDrops {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.ul {
+    padding: 0;
+    margin-left: 15px;
+}
+
+.li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

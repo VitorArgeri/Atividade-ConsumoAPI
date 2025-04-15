@@ -9,7 +9,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <p>Desenvolvido durante o curso de Desenvolvimento de Sistemas</p>
+        <p>Desenvolvido por <span className={styles.span}>Vitor de Almeida Argeri</span></p>
       </footer>
     </div>
   );

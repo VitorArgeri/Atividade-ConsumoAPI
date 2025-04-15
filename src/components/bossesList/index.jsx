@@ -3,7 +3,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-import styles from "./filmList.module.css";
+import styles from "./bossesList.module.css";
 
 export default function BossesList() {
     const url = "https://eldenring.fanapis.com/api/bosses"
@@ -17,7 +17,7 @@ export default function BossesList() {
             try {
                 setLoading(true);
                 const response = await axios.get(url);
-                setBosses(response.data);
+                setBosses(response.data.data);
                 setLoading(false);
             } catch (error) {
                 console.log("Erro ao buscar bosses na API")
@@ -25,7 +25,7 @@ export default function BossesList() {
                 setLoading(false);
             }
         }
-        fetchFilms();
+        fetchBosses();
     }, [])
 
     if (loading == true) {
@@ -46,20 +46,27 @@ export default function BossesList() {
 
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>Filmes do Studio Ghibli</h1>
-            <div className={styles.filmGrid}>
-                {films.map((film) => (
-                    <div key={film.id} className={styles.filmCard}>
-                        <div className={styles.imageContainer}>
-                            <img src={film.image} alt={film.title} className={styles.image} />
+            <h1 className={styles.bossesTitle}>Bosses de Elden Ring</h1>
+            <div className={styles.bossesGrid}>
+                {bosses.map((boss) => (
+                    <div key={boss.id} className={styles.bossCard}>
+                        <div className={styles.bossImageContainer}>
+                            <img src={boss.image} alt={boss.name} className={styles.bossImage} />
                         </div>
-                        <div className={styles.content}>
-                            <h2 className={styles.filmTitle}>{film.title}</h2>
-                            <p className={styles.director}>Diretor: {film.director}</p>
-                            <p className={styles.year}>{film.release_date}</p>
-                            <div className={styles.rating}>
-                                <span className={styles.score}>{film.rt_score}%</span>
-                            </div>
+
+                        <div className={styles.bossInfo}>
+                            <h2 className={styles.bossName}>{boss.name}</h2>
+                            <p className={styles.bossDescription}>{boss.description}</p>
+                            <p className={styles.bossRegion}><strong>Região</strong> {boss.region}</p>
+                            <p className={styles.bossLocation}><strong>Local:</strong> {boss.location}</p>
+                            <p className={styles.bossDrops}><strong>Drops:</strong>
+                                <ul className={styles.ul}>
+                                    {boss.drops.map((drop, index) => (
+                                        <li className={styles.li} key={index}>{drop}</li>
+                                    ))}
+                                </ul>
+                            </p>
+                            <p className={styles.bossHealthPoints}><strong>Pontos de Vida</strong>{boss.healthPoints}</p>
                         </div>
                     </div>
                 ))}
