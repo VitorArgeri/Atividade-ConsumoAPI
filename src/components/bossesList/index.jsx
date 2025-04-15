@@ -66,7 +66,7 @@ export default function BossesList() {
                                     ))}
                                 </ul>
                             </p>
-                            <p className={styles.bossHealthPoints}><strong>Pontos de Vida</strong>{boss.healthPoints}</p>
+                            <p className={styles.bossHealthPoints}><strong>Pontos de Vida </strong>{boss.healthPoints}</p>
                         </div>
                     </div>
                 ))}
